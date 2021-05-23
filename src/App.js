@@ -173,7 +173,9 @@ const Name = styled.p`
 function App() {
   const [amount, setAmount] = useState("");
   const [id, setId] = useState("");
-  const { loading, error, data: data1, refetch } = useQuery(List, {});
+  const { loading, error, data: data1, refetch } = useQuery(List, {
+    pollInterval: 500,
+  });
   const [updateUser, { data }] = useMutation(sendData);
 
   useEffect(() => {
