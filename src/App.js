@@ -185,6 +185,8 @@ function App() {
   const onButtonClick = () => {
     updateUser({ variables: { id: id, pushups: parseInt(amount) } });
     refetch();
+    setId("");
+    setAmount("");
   };
 
   console.log(data);
