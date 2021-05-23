@@ -173,9 +173,7 @@ const Name = styled.p`
 function App() {
   const [amount, setAmount] = useState("");
   const [id, setId] = useState("");
-  const { loading, data: data1, refetch } = useQuery(List, {
-    pollInterval: 500,
-  });
+  const { loading, error, data: data1, refetch } = useQuery(List, {});
   const [updateUser, { data }] = useMutation(sendData);
 
   useEffect(() => {
@@ -223,7 +221,9 @@ function App() {
 
             <Data>
               {loading ? (
-                <div>loading...</div>
+                <div>loading</div>
+              ) : error ? (
+                <div>`${error.message}`</div>
               ) : (
                 data1.Users.map((item) => (
                   <Item key={item.name}>
