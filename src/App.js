@@ -7,8 +7,8 @@ const List = gql`
   query Users {
     Users {
       name
-      todaysCount
       today
+      totalCount
     }
   }
 `;
