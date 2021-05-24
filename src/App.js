@@ -9,6 +9,7 @@ const List = gql`
       name
       todaysCount
       totalCount
+      today
     }
   }
 `;
@@ -179,8 +180,8 @@ function App() {
   const [updateUser, { data }] = useMutation(sendData);
 
   useEffect(() => {
-    console.log(amount);
-  }, [amount]);
+    console.log(data1);
+  }, [data1]);
 
   const onButtonClick = () => {
     updateUser({ variables: { id: id, pushups: parseInt(amount) } });
@@ -232,7 +233,7 @@ function App() {
                 data1.Users.map((item) => (
                   <Item key={item.name}>
                     <Name>{item.name}</Name>
-                    <p>-{item.todaysCount}</p>
+                    <p>-{item.today}</p>
                     <p>-{item.totalCount}</p>
                   </Item>
                 ))
