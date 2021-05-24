@@ -8,7 +8,7 @@ const List = gql`
     Users {
       name
       todaysCount
-      totalCount
+      today
     }
   }
 `;
@@ -232,7 +232,7 @@ function App() {
                 data1.Users.map((item) => (
                   <Item key={item.name}>
                     <Name>{item.name}</Name>
-                    <p>-{item.todaysCount}</p>
+                    <p>-{item.today}</p>
                     <p>-{item.totalCount}</p>
                   </Item>
                 ))

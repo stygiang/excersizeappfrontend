@@ -1,7 +1,7 @@
 {
   "name": "exersiceappfrontend",
   "version": "0.1.0",
-  "proxy": "https://excersizeappbackend.herokuapp.com/",
+  "proxy": "https://excersizeappbackend.herokuapp.com/graphql/",
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.3.19",

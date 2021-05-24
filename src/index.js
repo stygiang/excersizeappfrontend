@@ -10,6 +10,7 @@ const client = new ApolloClient({
   uri: `https://excersizeappbackend.herokuapp.com/graphql`,
   cache: new InMemoryCache(),
 });
+//https://excersizeappbackend.herokuapp.com/graphql
 
 ReactDOM.render(
   <React.StrictMode>
