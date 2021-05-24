@@ -7,7 +7,7 @@ const List = gql`
   query Users {
     Users {
       name
-      today
+      todaysCount
       totalCount
     }
   }
@@ -232,7 +232,7 @@ function App() {
                 data1.Users.map((item) => (
                   <Item key={item.name}>
                     <Name>{item.name}</Name>
-                    <p>-{item.today}</p>
+                    <p>-{item.todaysCount}</p>
                     <p>-{item.totalCount}</p>
                   </Item>
                 ))
